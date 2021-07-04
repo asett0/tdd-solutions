@@ -1,7 +1,0 @@
-module Counts
-
-import Hello
-import System.REPL
-
-main : IO ()
-main = repl "Enter a string: " $ shown . counts

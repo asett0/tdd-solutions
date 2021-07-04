@@ -1,6 +1,6 @@
-module Counts
+module Chap2.Counts
 
-import Chap2
+import Chap2.Core
 import System.REPL
 
 main : IO ()

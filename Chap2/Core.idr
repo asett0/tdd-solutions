@@ -1,4 +1,4 @@
-module Chap2
+module Chap2.Core
 
 import Data.Strings
 import Data.List
