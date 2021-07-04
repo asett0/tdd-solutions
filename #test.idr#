@@ -1,9 +1,0 @@
-import Data.Vect
-
-multMatrix : Num a => Vect n (Vect m a) -> Vect m (Vect p a) -> Vect n (Vect p a)
-multMatrix [] [] = ?multMatrix_rhs_3
-multMatrix [] ([] :: []) = ?multMatrix_rhs_4
-multMatrix [] ([] :: (x :: xs)) = ?multMatrix_rhs_7
-multMatrix [] ((x :: ys) :: xs) = ?multMatrix_rhs_6
-multMatrix (x :: xs) [] = ?multMatrix_rhs_1
-multMatrix (x :: xs) (y :: ys) = ?multMatrix_rhs_5
