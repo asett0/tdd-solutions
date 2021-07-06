@@ -13,7 +13,7 @@ package TDD
 -- depends =
 
 -- modules to install
-modules = Chap2.Core, Chap2.Counts, Chap2.Palindrome, Chap3.Core
+modules = Chap2.Core, Chap2.Counts, Chap2.Palindrome, Chap3.Core, Chap4.Core
 
 -- main file (i.e. file to load at REPL)
 -- main =

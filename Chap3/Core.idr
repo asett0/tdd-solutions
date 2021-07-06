@@ -23,11 +23,11 @@ my_vect_map : (a -> b) -> Vect n a -> Vect n b
 my_vect_map f [] = []
 my_vect_map f (x :: xs) = f x :: my_vect_map f xs
 
-createEmpties : {n: _} -> Vect n (Vect 0 elem)
-createEmpties = replicate _ []
+createEmpties : {n : Nat} -> Vect n (Vect 0 elem)
+createEmpties {n} = replicate n []
 
 export
-transposeMat : {n : _} -> Vect m (Vect n elem) -> Vect n (Vect m elem)
+transposeMat : {n : Nat} -> Vect m (Vect n elem) -> Vect n (Vect m elem)
 transposeMat [] = createEmpties
 transposeMat (x :: xs) = let xsTrans = transposeMat xs in
     zipWith (::) x xsTrans
@@ -42,7 +42,7 @@ multHelper _ [] = []
 multHelper x (y :: ys) = (sum $ zipWith (*) x y) :: multHelper x ys 
 
 export
-multMatrix : Num a => {p : _} -> Vect (n) (Vect m a) -> Vect m (Vect p a) -> Vect n (Vect p a)
+multMatrix : Num a => {p : Nat} -> Vect n (Vect m a) -> Vect m (Vect p a) -> Vect n (Vect p a)
 multMatrix [] _ = []
 multMatrix (x :: xs) ys = let ysTrans = transposeMat ys in
     multHelper x ysTrans :: multMatrix xs ys
